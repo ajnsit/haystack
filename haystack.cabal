@@ -16,6 +16,7 @@ cabal-version:       >=1.18
 library
   hs-source-dirs:      src
   exposed-modules:     Haystack.Lib
+  other-modules:       Haystack.Config
   build-depends:       base       >= 4.7   && < 5
                      , dyre       >= 0.8   && < 0.9
                      , wai-routes >= 0.9.3 && < 0.10

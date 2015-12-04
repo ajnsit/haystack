@@ -1,15 +1,16 @@
-module Haystack.Lib where
+module Haystack.Lib (
+  message, errorMsg,
+  haystackConfig, defaultConfig
+) where
+
+import Haystack.Config
 
 import qualified Config.Dyre as Dyre
 import Config.Dyre.Relaunch
 
 import System.IO
 
-data Config = Config { message :: String, errorMsg :: Maybe String }
 data State  = State { bufferLines :: [String] } deriving (Read, Show)
-
-defaultConfig :: Config
-defaultConfig = Config "Haystack Example v0.1" Nothing
 
 showError :: Config -> String -> Config
 showError cfg msg = cfg { errorMsg = Just msg }
