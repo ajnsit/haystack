@@ -5,4 +5,5 @@ extra-deps:
 - dyre-0.8.12
 - io-storage-0.3
 - xdg-basedir-0.2.2
+- wai-routes-0.9.3
 flags: {}
